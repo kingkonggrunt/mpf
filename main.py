@@ -11,3 +11,7 @@ if __name__ == '__main__':
     elm_search_box = driver.find_element(value="sb_form_q")
     elm_search_box.send_keys("some keys")
     elm_search_box.send_keys(Keys.ENTER)
+
+    elm_b_search_box = driver.find_element(value="sb_form_q")
+    elm_b_search_box.clear()
+    elm_b_search_box.send_keys("testing")
