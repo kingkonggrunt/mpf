@@ -3,6 +3,17 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import chrome, edge
 
 edge_driver = "drivers/msedgedriver.exe"
+
+# check if edge_driver exist
+import os
+
+if not os.path.exists("drivers/msedgedriver.exe"):
+    raise FileNotFoundError("""
+        Microsoft Edge WebDriver not found.
+        Please download WebDriver Here: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+        Required FilePath: drivers/msedgedriver.exe
+    """)
+
 url = 'https://www.bing.com'
 
 
